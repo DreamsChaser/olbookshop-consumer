@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - usdpsys@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1">
+      <Visible>1</Visible>
+    </schema>
+    <table id="3" parent="2" name="emp"/>
+    <table id="4" parent="2" name="sys_role"/>
+    <table id="5" parent="2" name="sys_role_user"/>
+    <table id="6" parent="2" name="sys_user"/>
+    <table id="7" parent="2" name="t_customer"/>
+    <table id="8" parent="2" name="t_emp"/>
+    <table id="9" parent="2" name="t_emp_info"/>
+    <column id="10" parent="3" name="id">
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="11" parent="3" name="age">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="12" parent="3" name="gender">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="13" parent="3" name="name">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <key id="14" parent="3" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="15" parent="4" name="ID">
+      <Comment>唯一标识</Comment>
+      <DataType>VARCHAR(32)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="16" parent="4" name="ROLE_NAME">
+      <Comment>角色名</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <key id="17" parent="4" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="18" parent="5" name="ID">
+      <Comment>唯一标识</Comment>
+      <DataType>VARCHAR(32)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="19" parent="5" name="USER_ID">
+      <Comment>用户</Comment>
+      <DataType>VARCHAR(32)|12</DataType>
+    </column>
+    <column id="20" parent="5" name="ROLE_ID">
+      <Comment>角色</Comment>
+      <DataType>VARCHAR(32)|12</DataType>
+    </column>
+    <key id="21" parent="5" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="22" parent="6" name="ID">
+      <Comment>唯一标识</Comment>
+      <DataType>VARCHAR(32)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="23" parent="6" name="USER_NAME">
+      <Comment>登录用户名</Comment>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="24" parent="6" name="PASSWORD">
+      <Comment>登录密码</Comment>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="25" parent="6" name="SALT">
+      <Comment>加密盐</Comment>
+      <DataType>VARCHAR(32)|12</DataType>
+    </column>
+    <key id="26" parent="6" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="7" name="CUSTOMER_ID">
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="7" name="CUSTOMER_ADDR">
+      <DataType>VARCHAR(100)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="29" parent="7" name="CUSTOMER_CS">
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="30" parent="7" name="CUSTOMER_FAX">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="31" parent="7" name="CUSTOMER_LEVEL">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="32" parent="7" name="CUSTOMER_NAME">
+      <DataType>VARCHAR(50)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="33" parent="7" name="CUSTOMER_REMARK">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="34" parent="7" name="CUSTOMER_WEBSITE">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <index id="35" parent="7" name="UK_3wxhdewtvdicnyxpd2ldblq8x">
+      <ColNames>CUSTOMER_NAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="36" parent="7" name="PRIMARY">
+      <ColNames>CUSTOMER_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="37" parent="8" name="EMP_ID">
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="38" parent="8" name="EMP_AGE">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="39" parent="8" name="EMP_GENDER">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="40" parent="8" name="EMP_NAME">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <key id="41" parent="8" name="PRIMARY">
+      <ColNames>EMP_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="42" parent="9" name="EMP_ID">
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="43" parent="9" name="EMP_AGE">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="44" parent="9" name="EMP_GENDER">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="45" parent="9" name="EMP_NAME">
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <key id="46" parent="9" name="PRIMARY">
+      <ColNames>EMP_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

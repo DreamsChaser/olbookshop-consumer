@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - usdpsys@localhost" uuid="b08a482d-6b05-4fc5-bb72-7e0aebdeed8d">
+    <database-info product="MySQL" version="5.0.22-community-nt" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="usdpsys"/>
+    <table name="emp" schema="" catalog="usdpsys" type="TABLE">
+      <column name="id" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="age" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="gender" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="sys_role" schema="" catalog="usdpsys" type="TABLE">
+      <column name="ID" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5ZSv5LiA5qCH6K+G"/>
+      <column name="ROLE_NAME" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" remarks="6KeS6Imy5ZCN"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="sys_role_user" schema="" catalog="usdpsys" type="TABLE">
+      <column name="ID" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5ZSv5LiA5qCH6K+G"/>
+      <column name="USER_ID" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12" remarks="55So5oi3"/>
+      <column name="ROLE_ID" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12" remarks="6KeS6Imy"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="sys_user" schema="" catalog="usdpsys" type="TABLE">
+      <column name="ID" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5ZSv5LiA5qCH6K+G"/>
+      <column name="USER_NAME" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" remarks="55m75b2V55So5oi35ZCN"/>
+      <column name="PASSWORD" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" remarks="55m75b2V5a+G56CB"/>
+      <column name="SALT" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12" remarks="5Yqg5a+G55uQ"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+    </table>
+    <table name="t_customer" schema="" catalog="usdpsys" type="TABLE">
+      <column name="CUSTOMER_ID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="CUSTOMER_ADDR" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="CUSTOMER_CS" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="CUSTOMER_FAX" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CUSTOMER_LEVEL" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CUSTOMER_NAME" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="CUSTOMER_REMARK" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CUSTOMER_WEBSITE" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="CUSTOMER_ID"/>
+      <index name="UK_3wxhdewtvdicnyxpd2ldblq8x" unique="true" columns="CUSTOMER_NAME"/>
+    </table>
+    <table name="t_emp" schema="" catalog="usdpsys" type="TABLE">
+      <column name="EMP_ID" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="EMP_AGE" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="EMP_GENDER" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="EMP_NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="EMP_ID"/>
+    </table>
+    <table name="t_emp_info" schema="" catalog="usdpsys" type="TABLE">
+      <column name="EMP_ID" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="EMP_AGE" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="EMP_GENDER" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="EMP_NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="EMP_ID"/>
+    </table>
+  </data-source>
+</component>
